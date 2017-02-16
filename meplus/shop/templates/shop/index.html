@@ -1,3 +1,4 @@
+{% load staticfiles %}
 <!doctype html>
 <html>
 	<head>
@@ -7,13 +8,13 @@
 		<meta name="author" content="ANGELOSTUDIO.NET">
 		<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-		<link rel="stylesheet" href="css/style.css?v=5">
-		<link rel="stylesheet" href="css/icomoon/style.css">
-		<link rel="shortcut icon" href="img/ico/32.png" sizes="32x32" type="image/png"/>
-		<link rel="apple-touch-icon-precomposed" href="img/ico/60.png" type="image/png"/>
-		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/ico/72.png" type="image/png"/>
-		<link rel="apple-touch-icon-precomposed" sizes="120x120" href="img/ico/120.png" type="image/png"/>
-		<link rel="apple-touch-icon-precomposed" sizes="152x152" href="img/ico/152.png" type="image/png"/>
+		<link rel="stylesheet" href="{% static 'stellashop/css/style.css' %}?v=5">
+		<link rel="stylesheet" href="{% static 'stellashop/css/icomoon/style.css' %}">
+		<link rel="shortcut icon" href="{% static 'stellashop/img/ico/32.png' %}" sizes="32x32" type="image/png"/>
+		<link rel="apple-touch-icon-precomposed" href="{% static 'stellashop/img/ico/60.png' %}" type="image/png"/>
+		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="{% static 'stellashop/img/ico/72.png' %}" type="image/png"/>
+		<link rel="apple-touch-icon-precomposed" sizes="120x120" href="{% static 'stellashop/img/ico/120.png' %}" type="image/png"/>
+		<link rel="apple-touch-icon-precomposed" sizes="152x152" href="{% static 'stellashop/img/ico/152.png' %}" type="image/png"/>
 		<!--[if lt IE 9]>
 			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -60,7 +61,7 @@
 				<div class="row">
 					<div class="col-sm-8">
 						<a href="product1.html">
-							<img src="img/vase_1a.jpg" class="img-responsive" alt="item">
+							<img src="{% static 'stellashop/img/vase_1a.jpg' %}" class="img-responsive" alt="item">
 							<span class="productlist-price-container">
 								<span class="product-price">
 									<span class="price">14.00</span>
@@ -70,7 +71,7 @@
 					</div>
 					<div class="col-sm-4">
 						<a href="product2.html">
-							<img src="img/vase_2a.jpg"  class="img-responsive" alt="item">
+							<img src="{% static 'stellashop/img/vase_2a.jpg' %}"  class="img-responsive" alt="item">
 							<span class="productlist-price-container">
 								<span class="product-price">
 									<span class="price">28.00</span>
@@ -80,7 +81,7 @@
 					</div>
 					<div class="col-sm-4">
 						<a href="product3.html">
-							<img src="img/vase_3a.jpg"  class="img-responsive" alt="item">
+							<img src="{% static 'stellashop/img/vase_3a.jpg' %}"  class="img-responsive" alt="item">
 							<span class="productlist-price-container">
 								<span class="product-price">
 									<span class="price">24.00</span>
@@ -93,7 +94,7 @@
 					<div class="col-sm-4 special">
 						<div class="col-sm-12">
 							<a href="product4.html">
-								<img src="img/vase_4a.jpg"  class="img-responsive" alt="item">
+								<img src="{% static 'stellashop/img/vase_4a.jpg' %}"  class="img-responsive" alt="item">
 								<span class="productlist-price-container">
 									<span class="product-price">
 										<span class="price">16.00</span>
@@ -103,7 +104,7 @@
 						</div>
 						<div class="col-sm-12">
 							<a href="product5.html">
-								<img src="img/vase_5a.jpg"  class="img-responsive" alt="item">
+								<img src="{% static 'stellashop/img/vase_5a.jpg' %}"  class="img-responsive" alt="item">
 								<div class="productlist-label">
 									<span class="sale-label">Sale</span>
 								</div>
@@ -120,7 +121,7 @@
 					</div>
 					<div class="col-sm-8">
 						<a href="product6.html">
-							<img src="img/vase_6a.jpg" class="img-responsive" alt="item">
+							<img src="{% static 'stellashop/img/vase_6a.jpg' %}" class="img-responsive" alt="item">
 							<div class="productlist-label">
 								<span class="sold-out-label">Sold Out</span>
 							</div>
@@ -135,7 +136,7 @@
 				<div class="row" id="more-items">
 					<div class="col-sm-6">
 						<a href="product7.html">
-							<img src="img/vase_7a.jpg"  class="img-responsive" alt="item">
+							<img src="{% static 'stellashop/img/vase_7a.jpg' %}"  class="img-responsive" alt="item">
 							<span class="productlist-price-container">
 								<span class="product-price">
 									<span class="price">17.00</span>
@@ -145,7 +146,7 @@
 					</div>
 					<div class="col-sm-6">
 						<a href="product8.html">
-							<img src="img/vase_8a.jpg"  class="img-responsive" alt="item">
+							<img src="{% static 'stellashop/img/vase_8a.jpg' %}"  class="img-responsive" alt="item">
 							<span class="productlist-price-container">
 								<span class="product-price">
 									<span class="price">21.00</span>
@@ -187,8 +188,8 @@
 
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-		<script type="text/javascript" src="js/placeholders.min.js"></script>
-		<script type="text/javascript" src="js/custom.js"></script>
+		<script type="text/javascript" src="{% static 'stellashop/js/placeholders.min.js' %}"></script>
+		<script type="text/javascript" src="{% static 'stellashop/js/custom.js' %}"></script>
 		
 	</body>
 

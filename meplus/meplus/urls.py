@@ -20,7 +20,7 @@ from django.contrib import admin
 from django.shortcuts import redirect,render
 
 urlpatterns = [
-    url(r'^$', lambda request: render(request,'accounts/index.html')),
+    url(r'^$', lambda request: render(request,'shop/index.html')),
     url(r'^admin/', admin.site.urls),
     url(r'^accounts/', include('allauth.urls')),
     url(r'^accounts/', include('accounts.urls',namespace = 'accounts')),

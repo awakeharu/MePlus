@@ -21,13 +21,10 @@ def post_sale_new(request):
             messages.success(request, '새 포스팅을 작성했습니다.')
             return redirect('shop:post_sale_detail', post.pk)
     else:
-        form = PostForm()
+        form = PostSaleForm()
     return render(request , 'shop/post_form.html',{
             'form' : form,
         })
-
-
-
 
 
 def post_sale_detail(request, pk):
@@ -35,7 +32,7 @@ def post_sale_detail(request, pk):
     comments = post.comment_set.all()
 
     #GET 요청시 detail view 반환
-    comment_form = CommentForm()
+    comment_form = SaleCommentForm()
 
     return render(request, 'shop/post_sale_detail.html',{
         'post' : post,

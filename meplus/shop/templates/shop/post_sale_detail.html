@@ -1,9 +1,11 @@
 {% extends "base.html" %}
+{% load staticfiles %}
+
 {% block content %}
 <div class="container-fluid hidden-xs">
 				<div class="row">
 					<ol class="breadcrumb">
-					  <li><a href="index.html">Shop</a></li>
+					  <li><a href="{% url "shop:post_sale_list" %}">Shop</a></li>
 					  <li class="active">Tuscan urns</li>
 					</ol>
 				</div>
@@ -20,9 +22,9 @@
 				</div>	
 				<div class="row">
 					<div class="col-sm-8 ">
-						<img src="img/vase_1a.jpg" class="product-img img-responsive" alt="item">
-						<img src="img/vase_1b.jpg" class="product-img img-responsive" alt="item">
-						<img src="img/vase_1c.jpg" class="product-img img-responsive" alt="item">
+						<img src="{% static 'stellashop/img/vase_1a.jpg' %}" class="product-img img-responsive" alt="item">
+						<img src="{% static 'stellashop/img/vase_1b.jpg' %}" class="product-img img-responsive" alt="item">
+						<img src="{% static 'stellashop/img/vase_1c.jpg' %}" class="product-img img-responsive" alt="item">
 					</div>
 					<div class="col-sm-4 ">
 						<h2 class="product-title hidden-xs">Tuscan urns</h2>
@@ -51,7 +53,7 @@
 									<option value="XL">XL</option>
 								</select>
 							</div>	
-                            
+
 							<div class="product-btn">
 								<a href="" class="btn">Add To Cart</a>
 							</div>	

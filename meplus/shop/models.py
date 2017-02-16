@@ -14,9 +14,9 @@ class Post_Sale(models.Model):
     def __str__(self):
         return self.title
 
-class Post_Sale_comment(models.Model):
+class Post_Sale_Comment(models.Model):
     name = models.ForeignKey(settings.AUTH_USER_MODEL)
-    question = models.CharField(max_length=1000)
+    message = models.CharField(max_length=1000)
     post_sale_comment = models.ForeignKey(Post_Sale, related_name='comment_set')
     comment = models.ForeignKey("self", blank=True, null=True, related_name='reply_set')
     created_at = models.DateTimeField(auto_now_add=True)

@@ -1,7 +1,7 @@
 from django.conf.urls import url
-from django.shortcuts import render
-
+from shop import views
 
 urlpatterns = [
-    url(r'^$', lambda request: render(request, 'shop/index.html')),
+    url(r'^(?P<pk>\d+)/$', views.post_sale_detail, name = 'post_sale_detail' ),
+    url(r'^new/$', views.post_sale_new, name = 'post_sale_new'),
 ]

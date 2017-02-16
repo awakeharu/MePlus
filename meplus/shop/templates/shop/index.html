@@ -6,8 +6,8 @@
 			<div class="container-fluid productlist">
 				<div class="row">
 					<div class="col-sm-8">
-						<a href="product1.html">
-							<img src="{% static 'stellashop/img/vase_1a.jpg' %}" class="img-responsive" alt="item">
+						<a href="{% url "post_sale_detail" post.pk  %}">
+							<img src="{{ post.image.url }}" class="img-responsive" alt="item">
 							<span class="productlist-price-container">
 								<span class="product-price">
 									<span class="price">14.00</span>

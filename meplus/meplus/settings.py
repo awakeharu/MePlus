@@ -133,9 +133,9 @@ STATIC_URL = '/static/'
 
 # kako login 을 위한 세팅
 
-AUTHENTICATION_BACKENDS = (
-    #Needed to login by username in Django admin, regardless of 'allauth'
-    'django.contrib.auth.backends.ModelBackend',
-    #'allauth' specific authentication methods, such as login by e-mail
-    'allauth.account.auth_backends.AuthenticationBackend',
-    )
+# AUTHENTICATION_BACKENDS = (
+#     #Needed to login by username in Django admin, regardless of 'allauth'
+#     'django.contrib.auth.backends.ModelBackend',
+#     #'allauth' specific authentication methods, such as login by e-mail
+#     'allauth.account.auth_backends.AuthenticationBackend',
+#     )

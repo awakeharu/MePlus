@@ -14,7 +14,7 @@ class Post_Notice(models.Model):
     def __str__(self):
         return self.title
 
-    
+
 class Contact(models.Model):
     name = models.ForeignKey(settings.AUTH_USER_MODEL)
     email = models.EmailField(max_length=70,blank=False)

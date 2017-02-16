@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'accounts',
     'blog',
     'shop',
+    'contact',
 
     #카카오 로그인을 위한 apps
     'allauth',

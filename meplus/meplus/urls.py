@@ -21,11 +21,13 @@ from django.shortcuts import redirect,render
 
 urlpatterns = [
 
-    url(r'^$', lambda request: render(request, 'shop/index.html'), name='shop'),
+    url(r'^$', lambda request: redirect('shop:post_sale_list')),
+    
     url(r'^about/', lambda request: render(request, 'about.html'), name='about'),
     url(r'^contact/', lambda request: render(request, 'contact.html'), name='contact'),
     url(r'^admin/', admin.site.urls),
+    url(r'^shop/', include('shop.urls', namespace = 'shop')),
     url(r'^accounts/', include('allauth.urls')),
     url(r'^accounts/', include('accounts.urls',namespace = 'accounts')),
-    url(r'^blog/', include('blog.urls')),
+    url(r'^blog/', include('blog.urls' , namespace = 'blog')),
 ]

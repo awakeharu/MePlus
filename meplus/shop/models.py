@@ -4,7 +4,7 @@ import os
 
 # Create your models here.
 class Post_Sale(models.Model):
-    author = models.ForeignKey(settings.AUTH_USER_MODEL, limit_choices_to={"staff": True})
+    author = models.ForeignKey(settings.AUTH_USER_MODEL, limit_choices_to={"is_staff": True})
     title = models.CharField(max_length=30)
     contents = models.TextField()
     image = models.ImageField(null=True, blank=True)

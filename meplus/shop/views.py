@@ -2,10 +2,14 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import redirect , render, get_object_or_404
 from shop.models import Post_Sale, Post_Sale_Comment
-from shop.forms import PostSaleForm, CommentForm
+from shop.forms import PostSaleForm, SaleCommentForm
 
 
 # Create your views here.
+def post_sale_list(request):
+    return render(request, 'shop/index.html',{
+        'post': Post_Sale.objects.last(),
+    })
 
 def post_sale_new(request):
     if request.method == 'POST':
@@ -15,7 +19,7 @@ def post_sale_new(request):
             post = form.save(commit=False)
             post.save()
             messages.success(request, '새 포스팅을 작성했습니다.')
-            return redirect('post_sale_detail', post.pk)
+            return redirect('shop:post_sale_detail', post.pk)
     else:
         form = PostForm()
     return render(request , 'shop/post_form.html',{
